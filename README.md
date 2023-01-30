@@ -144,5 +144,5 @@ The device (RPi) will be registered under the user configuration. But, each stud
    - Create a new "main" section after [Deliverables](#deliverables) called "Demonstration". Using markdown, display the images that you took in this README.
    - Create a [table of contents](https://gist.github.com/jonschlinkert/ac5d8122bfaaa394f896) for this readme. Place it before the [What does it do?](#what-does-it-do) section. 
 
-**Note**: Issues 3 and 4 should be completed by a single student (in a single issue) if you belong to a team of three. They should be addressed separately, by different students and in separate issues, if you belong to a team of four.
+**Note**: Issues 3 and 4 should be completed by a single student (in a single issue) if you belong to a team of three. If you belong to a team of four, they should be addressed separately by two different students, and in separate issues.
 
