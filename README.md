@@ -136,7 +136,13 @@ The device (RPi) will be registered under the user configuration. But, each stud
 1. Capability to erase all LEDs.
    - Add a function in the [device.py](device.py) script to continuously check the joystick and set all the values of the LEDs to ```[0,0,0]``` if/when the joystick is sense pressed down.
      - Inside this newly created function you should call (```clear_leds(device_id)```) from the Backend to clear all LEDs. **NOT** calling the ```sense.set_pixels(...)```  function (otherwise the database will not be updated). The device id can be acquired with the function ```get_device_id()```, also from the Backend class.
-2. Add image samples
-   - Take nice screenshots from your group mates LED screen and add to the [images](images) folder.
-3. Update the header/title string in the GUI
+2. Update the header/title string in the GUI
     - Update the ```header``` value from the [frontend.py](frontend.py) script to be your group name instead of ```SYSC3010 - Lab4```.
+3. Add image samples
+   - Take nice screenshots from your group mates LED screen and add to the [images](images) folder.
+4. Update the README
+   - Create a new "main" section after [Deliverables](#deliverables) called "Demonstration". Using markdown, display the images that you took in this README.
+   - Create a [table of contents](https://gist.github.com/jonschlinkert/ac5d8122bfaaa394f896) for this readme. Place it before the [What does it do?](#what-does-it-do) section. 
+
+**Note**: Issues 3 and 4 should be completed by a single student (in a single issue) if you belong to a team of three. They should be addressed separately, in separate issues, if you belong to a team of four.
+
