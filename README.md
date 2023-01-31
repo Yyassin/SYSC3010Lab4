@@ -1,7 +1,7 @@
 # SYSC3010 Lab4 Mini-Project
 This repository was created for Part3 of Lab4 of the SYSC3010 course at Carleton University. The main goals are:
 1. Demonstrate how to build a distributed embedded system using technologies that may be useful for students' own projects
-2. Use git as a Team, where each student changes files in their own branches and then merges their files in the main branch once the new features are implemented.
+2. Use git as a Team, where each student changes files in their own branches and then merges branch into the main branch once the new features are implemented.
 
 # What does it do?
 It allows ```users``` to remotely set the LED colors from the SenseHAT attached to a ```device``` (RPi).
@@ -86,14 +86,9 @@ mydbconfig.py
 
 # Deliverables
 
-## Student #1
-1. Fork the repository, **make it private, add your TA, and the prof**
-2. Add collaborators (your group mates)
-3. Configure your repository to enable issues: go to your forked repository :point_right: Settings :point_right: General :point_right: Features :point_right: then enable ```Issues```.
-
-## Student #2
-1. Create the Firebase real-time database. 
-2. Share the connection details with your teammates. They will need this information for their ```mydbconfig.py``` files so that their [backend.py](backend.py) script knows how to access the shared Firebase real-time DB.
+Before you get started, 
+1. Assign a student to create the Firebase real-time database. 
+2. Share the connection details amongst all members of the team. Everyone will need this information for their ```mydbconfig.py``` files so that their [backend.py](backend.py) script knows how to access the shared Firebase real-time DB.
 
 ## Each student
 
@@ -125,24 +120,25 @@ Once the database is setup and the mydbconfig.py is set, each student should run
 The device (RPi) will be registered under the user configuration. But, each student should give authorization to their group mates to control their own SenseHAT display/device (see instructions above) -->
 
 ### GitHub and git tasks
-1. Open at least 3 issues and assign a label to each
-2. Self-assign issues
-3. Create a new branch to work on the assigned issues
-4. Commit your changes to your current branch
-5. Once the code reflect the solutions, create a pull request to merge with the main branch and resolve the issue.
-6. Before merging the pull request, have at least one teammate review your code. You can discuss any concerns in the pull request discussion on GitHub.
+1. Open at least 4 issues and assign a label to each
+2. Assign the issues to your team members, ensuring each member receives at least one issue.
+3. Each team member should create a new branch to work on their assigned issues
+4. Commit all your changes to your newly created branch
+5. Once the code reflects your final solution, create a pull request to merge your new branch with the main branch and resolve your assigned issue.
+6. Before merging the pull request, have at least one *other* teammate review your code. You can discuss any concerns in the pull request's "discussions" section on GitHub.
+7. Once you and your teammates are satisfied with the solution, merge the pull request. Ensure the person who merges the pull request is different than the one who opened it originally.
 
 ### Issues
 1. Capability to erase all LEDs.
-   - Add a function in the [device.py](device.py) script to continuously check the joystick and set all the values of the LEDs to ```[0,0,0]``` if/when the joystick is sense pressed down.
-     - Inside this newly created function you should call (```clear_leds(device_id)```) from the Backend to clear all LEDs. **NOT** calling the ```sense.set_pixels(...)```  function (otherwise the database will not be updated). The device id can be acquired with the function ```get_device_id()```, also from the Backend class.
+   - Add a function in the [device.py](device.py) script to continuously check the joystick and set all the values of the LEDs to ```[0,0,0]``` if/when the joystick pressed down.
+     - Inside this newly created function you should call (```clear_leds(device_id)```) from the Backend to clear all LEDs. **DO NOT** call the ```sense.set_pixels(...)```  function (otherwise the database will not be updated). The device id can be acquired with the function ```get_device_id()```, which is also found in the Backend class.
 2. Update the header/title string in the GUI
     - Update the ```header``` value from the [frontend.py](frontend.py) script to be your group name instead of ```SYSC3010 - Lab4```.
 3. Add image samples
-   - Take nice screenshots from your group mates LED screen and add to the [images](images) folder.
+   - Take nice screenshots from your teammates' LED screens and add them to the [images](images) folder.
 4. Update the README
-   - Create a new "main" section, after [Deliverables](#deliverables), called "Demonstration". Using markdown, display the images that you took in this new section.
-   - Create a [table of contents](https://gist.github.com/jonschlinkert/ac5d8122bfaaa394f896) for this README. Place it before the [What does it do?](#what-does-it-do) section. 
+   - Create a new "main" section, after [Deliverables](#deliverables), called "Demonstration". Using markdown, display the images that you took under this new section.
+   - Create a [table of contents](https://gist.github.com/jonschlinkert/ac5d8122bfaaa394f896) for this README that, at the very least, contains all the top level headers (What does it do?, Install, Config, etc.). Place the table of contents before the [What does it do?](#what-does-it-do) section. 
 
 **Note**: Issues 3 and 4 should be completed by a single student (in a single issue) if you belong to a team of three. If you belong to a team of four, they should be addressed separately by two different students, and in separate issues.
 
