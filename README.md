@@ -98,10 +98,10 @@ Create your ```mydbconfig.py``` file. It should have the connection configuratio
 
 #### Step 2
 
-Execute the the [device.py](device.py) script on your RPi. The owner of the Firebase database should be able to visualize the new entries in his database. More information about how the [device.py](device.py) script works can be found [here](device.py).
+Execute the [device.py](device.py) script on your RPi. The owner of the Firebase database should be able to visualize the new entries in his database. More information about how the [device.py](device.py) script works can be found [here](device.py).
 
 #### Step 3
-Create a file to give authorization to your group mates to control your Raspberry pi. Each student should have their own file, and it should not be included in your repository. You can execute it as many times as you want, but you only need to do it once (once all users executed [Step 2](https://github.com/roger-selzler/SYSC3010Lab4#step-2). More information about authorizing other users to control your device can be found [above](https://github.com/roger-selzler/SYSC3010Lab4#authorizing-users-to-control-your-sense-hat-led-display).
+Create a file to give authorization to your group mates to control your Raspberry pi. Each student should have their own file, and it should not be included in your repository. You can execute it as many times as you want, but you only need to do it once (once all users have executed [Step 2](https://github.com/roger-selzler/SYSC3010Lab4#step-2)). More information about authorizing other users to control your device can be found [above](https://github.com/roger-selzler/SYSC3010Lab4#authorizing-users-to-control-your-sense-hat-led-display).
 
 #### Step 4
 Execute the [frontend.py](frontend.py) script to control your authorized devices. Since you executed the [device.py](device.py) script on your RPi, you have at least one device to control. Once your group mates give authorization for you to control their devices, you will see more device options to control. 
