@@ -33,13 +33,13 @@ The [device.py](device.py) script should be executed on your RPi. It also intera
 The next time you execute the [device.py](device.py) script, it will get the color values for the LED display from the database and set the SenseHAT LED display accordingly. While the script is running, it will *listen* for changes in the database by using [firebase streams](https://github.com/nhorvath/Pyrebase4#streaming). In other words, whenever any authorized user changes the LED color using the GUI then a message is received by [device.py](device.py) and the callback function associated with the Firebase stream updates the pixel(s) accordingly.
 
 ## Authorizing users to control your sense hat LED display
-Registered users in the database can be authorized to control your sense hat LED display. In fact, you should give your group mates authorization to control your device. You can achieve this by creating a file with the code below (with their respective emails).
+Registered users in the database can be authorized to control your sense hat LED display. In fact, you should give your teammates authorization to control your device. You can achieve this by creating a file with the code below (with their respective emails).
 ```
 from backend import Backend
 from mydbconfig import *
 backend = Backend(config, email, firstname, lastname)
 
-# Add each of your group mates
+# Add each of your teammates'
 backend.add_authorized_users('my_group_mate1_email@cmail.carleton.ca' )
 backend.add_authorized_users('my_group_mate2_email@cmail.carleton.ca' )
 
@@ -101,10 +101,10 @@ Create your ```mydbconfig.py``` file. It should have the connection configuratio
 Execute the [device.py](device.py) script on your RPi. The owner of the Firebase database should be able to visualize the new entries in his database. More information about how the [device.py](device.py) script works can be found [here](device.py).
 
 #### Step 3
-Create a file to give authorization to your group mates to control your Raspberry pi. Each student should have their own file, and it should not be included in your repository. You can execute it as many times as you want, but you only need to do it once (once all users have executed [Step 2](https://github.com/roger-selzler/SYSC3010Lab4#step-2)). More information about authorizing other users to control your device can be found [above](https://github.com/roger-selzler/SYSC3010Lab4#authorizing-users-to-control-your-sense-hat-led-display).
+Create a file to give authorization to your teammates to control your Raspberry pi. Each student should have their own file, and it should not be included in your repository. You can execute it as many times as you want, but you only need to do it once (once all users have executed [Step 2](https://github.com/roger-selzler/SYSC3010Lab4#step-2)). More information about authorizing other users to control your device can be found [above](https://github.com/roger-selzler/SYSC3010Lab4#authorizing-users-to-control-your-sense-hat-led-display).
 
 #### Step 4
-Execute the [frontend.py](frontend.py) script to control your authorized devices. Since you executed the [device.py](device.py) script on your RPi, you have at least one device to control. Once your group mates give authorization for you to control their devices, you will see more device options to control. 
+Execute the [frontend.py](frontend.py) script to control your authorized devices. Since you executed the [device.py](device.py) script on your RPi, you have at least one device to control. Once your teammates give authorization for you to control their devices, you will see more device options to control. 
 
 You can execute this file on your RPi, then verify the RPi IP address, and access it from your computer's web browser using the URL ```<RPI_IP_address>:8050```.
 
@@ -117,7 +117,7 @@ You can execute the <a href="https://github.com/roger-selzler/SYSC3010Lab4/blob/
 <!--
 Once the database is setup and the mydbconfig.py is set, each student should run the [device.py](device.py) so that their device is registered on the database. 
 
-The device (RPi) will be registered under the user configuration. But, each student should give authorization to their group mates to control their own SenseHAT display/device (see instructions above) -->
+The device (RPi) will be registered under the user configuration. But, each student should give authorization to their teammates to control their own SenseHAT display/device (see instructions above) -->
 
 ### GitHub and git tasks
 1. Open at least 4 issues and assign a label to each
